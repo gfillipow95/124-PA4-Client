@@ -1,8 +1,12 @@
 Product.class
-Session.class
 RESTClientServlet.class
-productPage$1.class
 Todo.class
+addToCart.class
+displayCart$1.class
+Session.class
+addToCart$1.class
+productPage$1.class
+displayCart.class
 Session$1.class
 RESTClientServlet$1.class
 productTables$1.class

@@ -22,6 +22,14 @@
     <servlet-name>Session</servlet-name>
     <servlet-class>Session</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Add To Cart</servlet-name>
+    <servlet-class>addToCart</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Display Cart</servlet-name>
+    <servlet-class>displayCart</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>restClientServlet</servlet-name>
     <url-pattern>/restcli</url-pattern>
@@ -37,6 +45,14 @@
   <servlet-mapping>
     <servlet-name>Session</servlet-name>
     <url-pattern>/session</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Add To Cart</servlet-name>
+    <url-pattern>/addToCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Display Cart</servlet-name>
+    <url-pattern>/displayCart</url-pattern>
   </servlet-mapping>
 
 </web-app>

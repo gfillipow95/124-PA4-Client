@@ -158,3 +158,28 @@ input:focus:invalid {
 #order-confirmation li h3 {
   font-weight: normal;
 }
+
+#addCart {
+    background-color: #5299D3;
+    color: white;
+    border: none;
+    border-radius: .5em;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    width: 150px;
+    margin: 10px auto;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    top: 30%;
+    left: 20%;
+    float: none;
+}
+
+#addCart:hover {
+    opacity: .75;
+}
