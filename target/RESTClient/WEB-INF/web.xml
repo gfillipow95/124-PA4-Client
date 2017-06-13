@@ -30,6 +30,10 @@
     <servlet-name>Display Cart</servlet-name>
     <servlet-class>displayCart</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Order Success</servlet-name>
+    <servlet-class>orderSuccess</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>restClientServlet</servlet-name>
     <url-pattern>/restcli</url-pattern>
@@ -54,5 +58,10 @@
     <servlet-name>Display Cart</servlet-name>
     <url-pattern>/displayCart</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Order Success</servlet-name>
+    <url-pattern>/orderSuccess</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>
