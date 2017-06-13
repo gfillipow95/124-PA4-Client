@@ -81,7 +81,7 @@ public class productPage extends HttpServlet{
                 "<h3>"+name+"</h3>\n"+
                 "<h4 id='price' data-price='"+price.toString()+"'>$"+price.toString()+"</h4>\n"+
                 "</div>\n"+
-                "<a href='addToCart?id="+pid.toString()+"'>Add to Cart</a>\n"+ //add cart functionality here
+                "<a href='addToCart?id="+pid.toString()+"' id='addCart'>Add to Cart</a>\n"+ //add cart functionality here
                 "</div>\n"+
                 "</body>\n"+
                 "<script src=\"javascript/detailedPage.js\"></script>\n"+

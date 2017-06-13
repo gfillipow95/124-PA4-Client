@@ -76,7 +76,7 @@ public class Session extends HttpServlet{
                     out.print("<td class='product-description'>\n"+
                             "<a href='productPage?id="+pid.toString()+"'>\n"+
                             "<div class='image-container'>\n"+
-                            "<img class='product-image' src='"+pic+"'/>\n"+
+                            "<img class='recent-image product-image' src='"+pic+"'/>\n"+
                             "</div>\n"+
                             "<div class='desc-container'>\n"+
                             "<h3>"+description+"</h3>\n"+
