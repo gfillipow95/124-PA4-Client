@@ -1,0 +1,167 @@
+
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+
+}
+
+.nav-bar-container{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2% 0 0;
+    overflow: hidden;
+    background-color: #1C1818;
+}
+
+.nav-bar li{
+    float: right;
+    padding-right: 2%;
+    font-family: 'Lusitana', sans-serif;
+}
+
+.nav-bar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 15px;
+}
+
+.nav-bar li a:hover{
+  color: #5299D3;
+}
+
+#navbar-home {
+  /*color: #3fe2d0;*/
+}
+.section {
+  height: 100%;
+
+}
+
+.section-title {
+    margin: auto;
+    width: 50%;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.section-title h2 {
+  font-size: 50px;
+}
+
+.home{
+    background-image: url("../images/sabri-tuzcu-197978.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 300%;
+    font-family: 'Lusitana', sans-serif;
+    /*font-family: 'Cousine', monospace;*/
+}
+
+.product-sections{
+    font-family: 'Lusitana', sans-serif;
+    font-size: 200%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.product-table, .staff-table{
+  margin: 50px auto 0px auto;
+  width: 90%;
+  /*border: red solid 1px;*/
+}
+
+.product-description, .staff-description{
+    text-align: center;
+    cursor: pointer;
+    width: 20%;
+    padding: 20px;
+    margin: 0px 40px;
+
+    /*border: black solid 1px;*/
+}
+
+.product-description a {
+    text-decoration: none;
+    color: black;
+}
+
+.product-description a:hover{
+  color: gray;
+}
+
+.staff-description {
+  margin:10%;
+
+}
+
+
+
+.image-container {
+  /*border: blue solid 1px;*/
+  max-width: 100%;
+  height: 40%;
+}
+
+.desc-container{
+  height: 100px;
+}
+
+.desc-container h3{
+  padding-bottom: auto;
+  margin-bottom: 10px;
+}
+
+
+
+
+.product-image, .staff-image{
+  max-width: 100%;
+  max-height: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.product-image:hover, .staff-image:hover{
+    position: relative;
+    opacity: .6;
+}
+
+
+
+#coffee, #makers {
+  background-color: #cdb79e;
+}
+
+#mugs, #recent {
+  background-color: #FFF;
+}
