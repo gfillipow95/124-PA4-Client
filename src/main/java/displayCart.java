@@ -149,6 +149,9 @@ public class displayCart extends HttpServlet{
                 "<script src=\"resources/javascript/orderForm.js\"></script>\n"+
                 "</html>");
 
+            RequestDispatcher rd=request.getRequestDispatcher("orderForm?orderId=''"); //ADD ID SOMEHOW. GET FROM POST? 
+            rd.forward(request, response);
+
 
     }
 

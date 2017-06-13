@@ -27,6 +27,7 @@ public class displayCart extends HttpServlet{
 
         PrintWriter out = response.getWriter();
 
+
         out.print("<!DOCTYPE html>\n"+
                 "<html lang=\"en\">\n"+
                 "<head>\n"+
@@ -48,40 +49,6 @@ public class displayCart extends HttpServlet{
                 "<form id=\"order\" action=\"andromeda-3.ics.uci.edu:5130/jerseyrest/v1/api/orders\" method=\"post\" novalidate>\n"+
                 "<h2 id=\"title\" style=\"text-align: center\">Order Form</h2>\n"+
                 "<p style=\"text-align: center\">Required fields are followed by <strong><abbr title=\"required\">*</abbr></strong>.</p>\n"+
-                "<section class=\"contact\">\n"+
-                "<h2>Contact Information</h2>\n"+
-                "<p>\n"+
-                "<label for=\"firstname\">\n"+
-                "<span>First Name: </span>\n"+
-                "<strong><abbr title=\"required\">*</abbr></strong>\n"+
-                "<input type=\"text\" id=\"firstname\" name=\"firstname\">\n"+
-                "<div class=\"error\" id=\"firstNameError\"></div>\n"+
-                "</label>\n"+
-                "</p>\n"+
-                "<p>\n"+
-                "<label for=\"lastname\">\n"+
-                "<span>Last Name: </span>\n"+
-                "<strong><abbr title=\"required\">*</abbr></strong>\n"+
-                "<input type=\"text\" id=\"lastname\" name=\"lastname\">\n"+
-                "<div class=\"error\" id=\"lastNameError\"></div>\n"+
-                "</label>\n"+
-                "</p>\n"+
-                "<p>\n"+
-                "<label for=\"email\">\n"+
-                "<span>Email: </span>\n"+
-                "<strong><abbr title=\"required\">*</abbr></strong>\n"+
-                "<input type=\"email\" id=\"email\" name=\"email\">\n"+
-                "<div class=\"error\" id=\"emailError\"></div>\n"+
-                "</label>\n"+
-                "</p>\n"+
-                "<p>\n"+
-                "<label for=\"phonenumber\">\n"+
-                "<span>Phone Number: </span>\n"+
-                "<input type=\"text\" id=\"phonenumber\" name=\"phonenumber\" placeholder=\"###-###-####\">\n"+
-                "<div class=\"error\" id=\"phoneError\"></div>\n"+
-                "</label>\n"+
-                "</p>\n"+
-                "</section>\n"+
                 "<section class=\"shipping\">\n"+
                 "<h2>Shipping Information</h2>\n"+
                 "<p>\n"+
@@ -158,6 +125,9 @@ public class displayCart extends HttpServlet{
                 "<script src=\"resources/javascript/detailedPage.js\"></script>\n"+
                 "<script src=\"resources/javascript/orderForm.js\"></script>\n"+
                 "</html>");
+
+            RequestDispatcher rd=request.getRequestDispatcher("orderSuccess?orderId=''"); //ADD ID SOMEHOW GET FROM POST?
+            rd.forward(request, response);
 
 
     }
