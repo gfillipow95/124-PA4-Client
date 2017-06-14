@@ -110,7 +110,7 @@ public class displayCart extends HttpServlet{
                 "</table>\n"+
                 "</div>\n"+
                 "<div class=\"form-container\">\n"+
-                "<form id=\"order\" action=\"http://andromeda-3.ics.uci.edu:5130/jerseyrest/v1/api/orders\" method=\"post\" novalidate>\n"+
+                "<form id=\"order\" action=\"processCart\" method=\"post\" novalidate>\n"+
                 "<h2 id=\"title\" style=\"text-align: center\">Order Form</h2>\n"+
                 "<p style=\"text-align: center\">Required fields are followed by <strong><abbr title=\"required\">*</abbr></strong>.</p>\n"+
                 "<section class=\"contact\">\n"+
