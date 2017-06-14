@@ -119,7 +119,7 @@ public class displayCart extends HttpServlet{
                 "<label for=\"firstname\">\n"+
                 "<span>First Name: </span>\n"+
                 "<strong><abbr title=\"required\">*</abbr></strong>\n"+
-                "<input type=\"text\" id=\"firstname\" name=\"first_name\">\n"+
+                "<input type=\"text\" id=\"firstname\" name=\"firstname\">\n"+
                 "<div class=\"error\" id=\"firstNameError\"></div>\n"+
                 "</label>\n"+
                 "</p>\n"+
@@ -127,7 +127,7 @@ public class displayCart extends HttpServlet{
                 "<label for=\"lastname\">\n"+
                 "<span>Last Name: </span>\n"+
                 "<strong><abbr title=\"required\">*</abbr></strong>\n"+
-                "<input type=\"text\" id=\"lastname\" name=\"last_name\">\n"+
+                "<input type=\"text\" id=\"lastname\" name=\"lastname\">\n"+
                 "<div class=\"error\" id=\"lastNameError\"></div>\n"+
                 "</label>\n"+
                 "</p>\n"+
@@ -142,7 +142,7 @@ public class displayCart extends HttpServlet{
                 "<p>\n"+
                 "<label for=\"phonenumber\">\n"+
                 "<span>Phone Number: </span>\n"+
-                "<input type=\"text\" id=\"phonenumber\" name=\"phone\" placeholder=\"###-###-####\">\n"+
+                "<input type=\"text\" id=\"phonenumber\" name=\"phonenumber\" placeholder=\"###-###-####\">\n"+
                 "<div class=\"error\" id=\"phoneError\"></div>\n"+
                 "</label>\n"+
                 "</p>\n"+
@@ -151,7 +151,7 @@ public class displayCart extends HttpServlet{
                 "<h2>Shipping Information</h2>\n"+
                 "<p>\n"+
                 "<span>Shipping Method: </span>\n"+
-                "<select id=\"shippingMethod\" name=\"shipping\" onchange=\"addShipping()\">\n"+
+                "<select id=\"shippingMethod\" name=\"shippingMethod\" onchange=\"addShipping()\">\n"+
                 "<option value=\"0\" selected>Standard Shipping($0)</option>\n"+
                 "<option value=\"4\">Express Shipping($4)</option>\n"+
                 "<option value=\"10\">2-Day Shipping($10)</option>\n"+
@@ -161,7 +161,7 @@ public class displayCart extends HttpServlet{
                 "<p>\n"+
                 "<label for=\"zipcode\">\n"+
                 "<span>Zip Code: </span>\n"+
-                "<input type=\"number\" id=\"zipcode\" name=\"zipCode\" onblur=\"getPlaceAndTax(this.value)\">\n"+
+                "<input type=\"number\" id=\"zipcode\" name=\"zipcode\" onblur=\"getPlaceAndTax(this.value)\">\n"+
                 "<div class=\"error\" id=\"zipError\"></div>\n"+
                 "</label>\n"+
                 "<label for=\"address\">\n"+
@@ -191,7 +191,7 @@ public class displayCart extends HttpServlet{
                 "</p>\n"+
                 //"<p id=\"totalCost\" data-total=\"0\"><strong id=\"total\">Total Cost: </strong>\n"+
                 //"</p>\n"+
-                "<input type=\"hidden\" value=\""+total+"\" name=\"total_cost\" id=\"totalCostInput\" />\n"+
+                "<input type=\"hidden\" value=\""+total+"\" name=\"totalCostInput\" id=\"totalCostInput\" />\n"+
                 "<input type=\"hidden\" value=\""+cartInfoString+"\" name=\"cart_info\" id=\"cart_info\" />\n"+
                 "</section>\n"+
                 "<section class=\"payment\">\n"+
@@ -199,7 +199,7 @@ public class displayCart extends HttpServlet{
                 "<p>\n"+
                 "<label for=\"cardnumber\">\n"+
                 "<span>Credit Card Number: </span>\n"+
-                "<input type=\"number\" id=\"cardnumber\" name=\"card\">\n"+
+                "<input type=\"number\" id=\"cardnumber\" name=\"cardnumber\">\n"+
                 "<div class=\"error\" id=\"cardError\"></div>\n"+
                 "</label>\n"+
                 "</p>\n"+
@@ -211,7 +211,7 @@ public class displayCart extends HttpServlet{
                 "</label>\n"+
                 "<label for=\"expdate\">\n"+
                 "<span>Expiration Date: </span>\n"+
-                "<input type=\"text\" id=\"expdate\" name=\"exp_date\" placeholder=\"mm/yy\">\n"+
+                "<input type=\"text\" id=\"expdate\" name=\"expdate\" placeholder=\"mm/yy\">\n"+
                 "<div class=\"error\" id=\"expError\"></div>\n"+
                 "</label>\n"+
                 "</p>\n"+
@@ -224,10 +224,6 @@ public class displayCart extends HttpServlet{
                 "<script src=\"resources/javascript/detailedPage.js\"></script>\n"+
                 "<script src=\"resources/javascript/orderForm.js\"></script>\n"+
                 "</html>");
-
-
-        RequestDispatcher rd=request.getRequestDispatcher("orderSuccess");
-            rd.forward(request, response);
 
 
     }

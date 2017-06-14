@@ -61,6 +61,10 @@ public class processCart extends HttpServlet{
 
         WebTarget target = client.target(getBaseURI());
 
+        HttpSession session = request.getSession();
+
+
+
         Order order = new Order();
         order.setFirstName(firstName);
         order.setLastName(lastName);
@@ -78,18 +82,22 @@ public class processCart extends HttpServlet{
         order.setExpDate(expDate);
         order.setTotalCost(Double.parseDouble(totalCost));
 
+        ObjectMapper objectMapper = new ObjectMapper(); // This object is from the jackson library
+
+        String jsonInString = objectMapper.writeValueAsString(order);
+
         String jsonResponse =
                 target.path("v1").path("api").path("orders").
                 request().
                 accept(MediaType.APPLICATION_JSON).
-                post(Entity.entity(order, MediaType.APPLICATION_JSON), String.class);
+                post(Entity.entity(jsonInString, MediaType.APPLICATION_JSON), String.class);
 
         System.out.println(jsonResponse);
 
       //  Invocation.Builder invocationBuilder = target.request(MediaType.APPLICATION_JSON);
       //  Response resp = invocationBuilder.post(Entity.entity(order, MediaType.APPLICATION_JSON));
 
-        ObjectMapper objectMapper = new ObjectMapper(); // This object is from the jackson library
+
 
         Order order_conf = objectMapper.readValue(jsonResponse, new TypeReference<Order>(){});//Only return one product
 
@@ -97,13 +105,13 @@ public class processCart extends HttpServlet{
                 "<html lang=\"en\">\n"+
                 "<head>\n"+
                 "<meta charset=\"UTF-8\">\n"+
-                "<link rel='stylesheet' href='resources/stylesheets/productPage.css' />\n"+
+                "<link rel='stylesheet' href='stylesheets/productPage.css' />\n"+
                 "<link href=\"https://fonts.googleapis.com/css?family=Lusitana\" rel=\"stylesheet\">\n"+
                 "</head>\n"+
                 "<body>\n"+
                 "<div class=\"nav-bar-container\">\n"+
                 "<ul class=\"nav-bar\">\n"+
-                "<li><a id=\"navbar-home\" href=\"index#home\">Back to Home</a></li>\n"+
+                "<li><a id=\"navbar-home\" href=\"/RESTClient\">Back to Home</a></li>\n"+
                 "</ul>\n"+
                 "</div>\n"+
                 "<h1 style=\"text-align: center\">Your Order has been processed!</h1>\n"+
@@ -135,6 +143,8 @@ public class processCart extends HttpServlet{
                 "</body>\n"+
                 "</html>\n");
 
+        session.removeAttribute("cart");
+
 
     }
 
@@ -145,5 +155,11 @@ public class processCart extends HttpServlet{
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
+    }
+
+    private static URI getBaseURI() {
+
+        //Change the URL here to make the client point to your service.
+        return UriBuilder.fromUri("http://andromeda-3.ics.uci.edu:5130/jerseyrest").build();
     }
 }
